@@ -1,0 +1,14 @@
+.contactList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.noContactsMessage {
+  text-align: center;
+  font-size: 24px;
+  color: #ff0000;
+}

@@ -1,0 +1,31 @@
+.search {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  margin: 0 auto 16px;
+}
+
+.searchLabel {
+  font-weight: 500;
+  text-align: left;
+  margin-left: 32px;
+  margin-bottom: 8px;
+}
+
+.relative {
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  height: 36px;
+  padding: 8px 16px 8px 32px;
+  font-size: 16px;
+}

@@ -1,0 +1,36 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: baseline;
+}
+
+.greeting {
+  font-weight: 500;
+}
+
+.logoutBtn {
+  display: inline;
+  border-radius: 0;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-family: inherit;
+  height: none;
+  color: #0a0a0a;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.userName {
+  font-weight: 700;
+}
+
+.logoutBtn:hover,
+.logoutBtn:focus {
+  color: #3368f1;
+  background: none;
+  box-shadow: none;
+}
