@@ -1,9 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Toaster } from "react-hot-toast";
 
-import AppBar from "../AppBar/AppBar";
+import Layout from "../Layout/Layout";
 import Loader from "../Loader/Loader";
 
 const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
@@ -22,7 +21,6 @@ import RestrictedRoute from "../RestrictedRoute";
 import PrivateRoute from "../PrivateRoute";
 import { refreshUser } from "../../redux/auth/operations";
 import { selectIsRefreshing } from "../../redux/auth/selectors";
-import style from "./App.module.css";
 
 export default function App() {
   const dispatch = useDispatch();
@@ -36,8 +34,7 @@ export default function App() {
   return isRefreshing ? (
     <Loader />
   ) : (
-    <div className={style.container}>
-      <AppBar />
+    <Layout>
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -65,7 +62,6 @@ export default function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
-      <Toaster />
-    </div>
+    </Layout>
   );
 }
